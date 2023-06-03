@@ -4,9 +4,86 @@
   box-sizing: border-box;
 }
 
-body{
+html, body{
   font-family: Arial, Helvetica, sans-serif;
 }
+
+header{
+  background-color: rgb(173, 216, 230);
+  padding-top: 1rem;
+  /* Più sottile perchè nell'immagine dell'eserecizio
+  c'è una striscia azzura che "sborda" dallo sfondo.
+  Proviene dallo sfondo del container padre.
+  Verrà creato un selettore appena sotto, appositamente per ridurlo.
+  Si poteva risolvere mettendo la sezione incriminata nel main 
+  invece che nell'header (come ho fatto io).*/
+  padding-bottom: 4px;
+  width: 100%;
+  min-height: 70px;
+  background-color: #ff6900;
+}
+
+header nav{
+  margin-bottom: 1rem;
+}
+
+header nav{
+  display: flex;
+}
+
+.nav-links, .nav-logo, .nav-login{
+  padding: .5rem;
+}
+
+.nav-logo img{
+  width: 100px;
+  height: fit-content;
+}
+
+.nav-logo{
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-login{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-links{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links ul a{
+  display: inline-block;
+  padding: 0 1.1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.nav-login{
+  text-align: right;
+}
+
+.btn{
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  padding: .7rem 1rem;
+}
+
 
 .container{
   max-width: 920px;
@@ -17,6 +94,7 @@ body{
 .row{
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
 .col{
@@ -82,5 +160,5 @@ body{
 }
 
 .fav-icon{
-  
+
 }

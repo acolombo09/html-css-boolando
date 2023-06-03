@@ -113,6 +113,24 @@ header nav{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+}
+
+.product-card .img-b{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.product-card .img-b{
+  display: none;
+}
+
+.product-card:hover .img-b{
+  display: block;
 }
 
 .bottom-overlay{
@@ -120,6 +138,19 @@ header nav{
   bottom: 0;
   left: 0;
   height: 45px;
+}
+
+.top-overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .discount{
@@ -157,8 +188,4 @@ header nav{
 .price-original{
   font-size: 0.7rem;
   text-decoration: line-through;
-}
-
-.fav-icon{
-
 }
